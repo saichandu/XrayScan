@@ -22,9 +22,6 @@ from io import StringIO
 from matplotlib import pyplot as plt
 #from PIL import Image
 
-if tf.__version__ < '1.4.0':
-  raise ImportError('Please upgrade your tensorflow installation to v1.4.* or later!')
-
 
 # ## Env setup
 
@@ -61,7 +58,7 @@ from utils import visualization_utils as vis_util
 
 
 # What model to download.
-MODEL_NAME = 'chandu_inference_graph'
+MODEL_NAME = 'gun_inference_graph'
 MODEL_FILE = MODEL_NAME + '.tar.gz'
 DOWNLOAD_BASE = 'http://download.tensorflow.org/models/object_detection/'
 

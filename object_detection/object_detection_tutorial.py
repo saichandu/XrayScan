@@ -11,19 +11,12 @@
 
 import numpy as np
 import os
-import six.moves.urllib as urllib
 import sys
-import tarfile
 import tensorflow as tf
-import zipfile
+import cv2
 
-from collections import defaultdict
-from io import StringIO
 from matplotlib import pyplot as plt
 from PIL import Image
-
-if tf.__version__ < '1.4.0':
-  raise ImportError('Please upgrade your tensorflow installation to v1.4.* or later!')
 
 
 # ## Env setup
@@ -61,9 +54,9 @@ from utils import visualization_utils as vis_util
 
 
 # What model to download.
-MODEL_NAME = 'chandu_inference_graph'
+MODEL_NAME = 'gun_inference_graph'
 MODEL_FILE = MODEL_NAME + '.tar.gz'
-DOWNLOAD_BASE = 'http://download.tensorflow.org/models/object_detection/'
+#DOWNLOAD_BASE = 'http://download.tensorflow.org/models/object_detection/'
 
 # Path to frozen detection graph. This is the actual model that is used for the object detection.
 PATH_TO_CKPT = MODEL_NAME + '/frozen_inference_graph.pb'
@@ -117,8 +110,8 @@ def load_image_into_numpy_array(image):
 # image1.jpg
 # image2.jpg
 # If you want to test the code with your images, just add path to the images to the TEST_IMAGE_PATHS.
-PATH_TO_TEST_IMAGES_DIR = 'C:\PythonProjects\object_detection\images'
-TEST_IMAGE_PATHS = [ os.path.join(PATH_TO_TEST_IMAGES_DIR, 'chandu{}.jpg'.format(i)) for i in range(1, 3) ]
+PATH_TO_TEST_IMAGES_DIR = 'C:\\PythonProjects\\XrayScan\\object_detection\\test_images'
+TEST_IMAGE_PATHS = [ os.path.join(PATH_TO_TEST_IMAGES_DIR, 'gun{}.jpg'.format(i)) for i in range(1, 3) ]
 
 # Size, in inches, of the output images.
 IMAGE_SIZE = (12, 8)
