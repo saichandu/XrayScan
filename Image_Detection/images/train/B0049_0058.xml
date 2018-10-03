@@ -1,0 +1,26 @@
+<annotation>
+	<folder>gun</folder>
+	<filename>B0049_0058.jpg</filename>
+	<path>C:\Users\saavvaru\Documents\My Received Files\train\gun\B0049_0058.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>0</width>
+		<height>0</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>gun</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>28</xmin>
+			<ymin>21</ymin>
+			<xmax>1281</xmax>
+			<ymax>692</ymax>
+		</bndbox>
+	</object>
+</annotation>
