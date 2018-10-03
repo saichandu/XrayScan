@@ -152,6 +152,7 @@ with detection_graph.as_default():
       (boxes, scores, classes, num) = sess.run(
           [detection_boxes, detection_scores, detection_classes, num_detections],
           feed_dict={image_tensor: image_np_expanded})
+      print(scores)
       # Visualization of the results of a detection.
       vis_util.visualize_boxes_and_labels_on_image_array(
           image_np,
@@ -161,9 +162,8 @@ with detection_graph.as_default():
           category_index,
           use_normalized_coordinates=True,
           line_thickness=8)
-      cv2.imshow('image', cv2.resize(image_np,(640,480)))
-      if cv2.waitKey(25) & 0xFF == ord('q') :
-          break
-          cv2.destroyAllWindows()
-          cap.release()
+      cv2.imshow('image', cv2.resize(image_np,(320,240)))
+      cv2.destroyAllWindows()
+      cap.release()
+      ret=False
 
